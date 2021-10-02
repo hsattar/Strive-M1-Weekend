@@ -17,6 +17,7 @@ EX10.: Add an extra column to the Table named "actions" -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="script.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 <title>Document</title>
@@ -44,6 +45,10 @@ EX10.: Add an extra column to the Table named "actions" -->
         <td>Otto</td>
         <td>15</td>    
         <td>mark@otto.com</td>
+        <td>
+            <i class="btn btn-success bi bi-plus add-student"></i>
+            <i class="btn btn-danger bi bi-dash remove-student"></i>
+        </td>
       </tr>
       <tr>
         <th scope="row"><a href="https://www.facebook.com/jacob.thornton.37819">2</a></th>
@@ -51,6 +56,10 @@ EX10.: Add an extra column to the Table named "actions" -->
         <td>Thornton</td>
         <td>20</td>    
         <td>jacob@thornton.com</td>
+        <td>
+            <i class="btn btn-success bi bi-plus add-student"></i>
+            <i class="btn btn-danger bi bi-dash remove-student"></i>
+        </td>
       </tr>
       <tr>
         <th scope="row"><a href="https://www.facebook.com/larry.bird.celtics/">3</a></th>
@@ -58,6 +67,10 @@ EX10.: Add an extra column to the Table named "actions" -->
         <td>Bird</td>
         <td>25</td>        
         <td>larry@bird.com</td>
+        <td>
+            <i class="btn btn-success bi bi-plus add-student"></i>
+            <i class="btn btn-danger bi bi-dash remove-student"></i>
+        </td>
       </tr>
     </tbody>
 </table>
@@ -65,13 +78,13 @@ EX10.: Add an extra column to the Table named "actions" -->
 <div class="input-group mb-3 text-change">
     <input type="text" class="form-control" id="change-text" placeholder="Change Title & H1" aria-label="Username" aria-describedby="basic-addon1">
     <div class="input-group-prepend">
-      <span class="btn btn-success" id="change-text-btn">Change</span>
+      <span class="btn btn-primary" id="change-text-btn">Change</span>
     </div>
 </div>
 
 <section>
     <h3>Enrolled Students</h3>
-    <div>
+    <div id="enrolled">
 
     </div>
 </section>

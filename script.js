@@ -24,3 +24,23 @@ changeTextBtn.addEventListener('click', () => {
         changeText.value = ''
     }
 })
+
+let enrolledStudents = [ ]
+
+let addStudentBtn = document.getElementsByClassName('add-student')
+for (btn of addStudentBtn) {
+    btn.addEventListener('click', e => {
+        let student = e.target.parentNode.parentNode.innerText
+        let checkStudent = enrolledStudents.includes(student)
+        if (checkStudent === true) {
+            return
+        } else {
+            enrolledStudents.push(student)
+            let studentInfo = document.createElement('p')
+            let enrolled = document.getElementById('enrolled')
+            studentInfo.innerText = student
+            enrolled.appendChild(studentInfo)
+        }
+        console.log(enrolledStudents)
+    })
+}
