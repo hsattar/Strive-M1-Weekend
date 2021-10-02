@@ -10,6 +10,9 @@
 // EX20.: Add a "color picker" to the page, when the color changes, apply it to the header
 // EX21.: Add a dropdown (<select> tag), with your fav movies. When one is selected, change the heading of the page with the selected value 
 
+
+// EX 6 + 7
+
 let changeTextBtn = document.getElementById('change-text-btn')
 changeTextBtn.addEventListener('click', () => {
     let title = document.getElementsByTagName('title')[0]
@@ -25,22 +28,55 @@ changeTextBtn.addEventListener('click', () => {
     }
 })
 
-let enrolledStudents = [ ]
+
+// EX 11
+
+let studentsEnrolled = [ ]
 
 let addStudentBtn = document.getElementsByClassName('add-student')
 for (btn of addStudentBtn) {
     btn.addEventListener('click', e => {
         let student = e.target.parentNode.parentNode.innerText
-        let checkStudent = enrolledStudents.includes(student)
+        let checkStudent = studentsEnrolled.includes(student)
         if (checkStudent === true) {
             return
         } else {
-            enrolledStudents.push(student)
+            studentsEnrolled.push(student)
             let studentInfo = document.createElement('p')
+            studentInfo.classList.add('enrolled-student')
             let enrolled = document.getElementById('enrolled')
             studentInfo.innerText = student
             enrolled.appendChild(studentInfo)
+            checkNumberOfStudents()
         }
-        console.log(enrolledStudents)
     })
+}
+
+
+// EX 12
+
+let removeStudentBtn = document.getElementsByClassName('remove-student')
+for (btn of removeStudentBtn) {
+    btn.addEventListener('click', e => {
+        let student = e.target.parentNode.parentNode.innerText
+        let studentsEnrolledList = document.getElementsByClassName('enrolled-student')
+        for (studentList of studentsEnrolledList) {
+            console.log(studentList.innerText)
+            console.log(student)
+            if (studentList.innerText == student) {
+                console.log('remove')
+            }
+        }
+    })
+}
+
+
+
+// EX 15
+
+const checkNumberOfStudents = () => {
+    let enrolledStudents = document.getElementsByClassName('enrolled-student')
+    let numberOfEnrolledStudents = enrolledStudents.length
+    let enrolledStudentsHeader = document.getElementById('number-of-students-enrolled')
+    enrolledStudentsHeader.innerText = `Enrolled Students: ${numberOfEnrolledStudents}`
 }
