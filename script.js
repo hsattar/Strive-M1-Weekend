@@ -13,11 +13,11 @@
 
 // EX 6 + 7
 
+let changeText = document.getElementById('change-text')
 let changeTextBtn = document.getElementById('change-text-btn')
 changeTextBtn.addEventListener('click', () => {
     let title = document.getElementsByTagName('title')[0]
     let h1 = document.getElementsByTagName('h1')[0]
-    let changeText = document.getElementById('change-text')
 
     if (changeText.value === '') {
         alert('Text Field Is Empty')
@@ -25,6 +25,13 @@ changeTextBtn.addEventListener('click', () => {
         title.innerText = changeText.value
         h1.innerText = changeText.value
         changeText.value = ''
+    }
+})
+
+changeText.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        e.preventDefault()
+        changeTextBtn.click()
     }
 })
 
@@ -58,12 +65,12 @@ for (btn of addStudentBtn) {
 let removeStudentBtn = document.getElementsByClassName('remove-student')
 for (btn of removeStudentBtn) {
     btn.addEventListener('click', e => {
-        let student = e.target.parentNode.parentNode.innerText
+        let studentInfo = e.target.parentNode.parentNode
         let studentsEnrolledList = document.getElementsByClassName('enrolled-student')
-        for (studentList of studentsEnrolledList) {
-            console.log(studentList.innerText)
-            console.log(student)
-            if (studentList.innerText == student) {
+        for (student of studentsEnrolledList) {
+            console.log(student.innerText)
+            console.log(studentInfo)
+            if (student.innerText == studentInfo) {
                 console.log('remove')
             }
         }
