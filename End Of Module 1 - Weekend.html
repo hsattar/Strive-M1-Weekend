@@ -7,18 +7,8 @@ EX6.: Add a button next to "textChange", when pressed the title and the H1 of th
 EX7.: When the button is pressed, if "textChange" is empty, alert the user with a message
 EX8.: Add a new section with title "Enrolled Students"
 EX9.: Add an empty UL or DIV inside this new section
-EX10.: Add an extra column to the Table named "actions"
-EX11.: Add a button in each "action cell" with a "+" sign. When the button is pressed a new line must appear inside the "UL / DIV" in the enrolled section list
-EX12.: Add button for each item of the list. When pressed, the student is removed from the list. 
-EX13.: Create a simple form with 5 fields: ID, Name, Surname, Age, Email
-EX14.: Create a button "add students" which adds a new row to the table
-EX15.: Add a "counter section" in which there is always the number of items in the List
-EX16.: Add somewhere a button, on click, it changes the color of each item in the list in RED
-EX17.: Add somewhere a button, on click, it counts the number of entry in the list and shows it in a newly created paragraph
-EX18.: Add somewhere a button, on click, it swaps HEADER and Subtitle
-EX19.: Add somewhere a button, on click, change the table background to a random color
-EX20.: Add a "color picker" to the page, when the color changes, apply it to the header
-EX21.: Add a dropdown (<select> tag), with your fav movies. When one is selected, change the heading of the page with the selected value -->
+EX10.: Add an extra column to the Table named "actions" -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,12 +16,50 @@ EX21.: Add a dropdown (<select> tag), with your fav movies. When one is selected
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 <title>Document</title>
 </head>
 <body>
 
 <h1>Weekend Task</h1>
 <h2>End Of Module</h2>
+
+<table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>15</td>    
+        <td>mark@otto.com</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>20</td>    
+        <td>jacob@thornton.com</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>Bird</td>
+        <td>25</td>        
+        <td>larry@bird.com</td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
