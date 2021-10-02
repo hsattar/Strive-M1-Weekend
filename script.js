@@ -9,3 +9,18 @@
 // EX19.: Add somewhere a button, on click, change the table background to a random color
 // EX20.: Add a "color picker" to the page, when the color changes, apply it to the header
 // EX21.: Add a dropdown (<select> tag), with your fav movies. When one is selected, change the heading of the page with the selected value 
+
+let changeTextBtn = document.getElementById('change-text-btn')
+changeTextBtn.addEventListener('click', () => {
+    let title = document.getElementsByTagName('title')[0]
+    let h1 = document.getElementsByTagName('h1')[0]
+    let changeText = document.getElementById('change-text')
+
+    if (changeText.value === '') {
+        alert('Text Field Is Empty')
+    } else {
+        title.innerText = changeText.value
+        h1.innerText = changeText.value
+        changeText.value = ''
+    }
+})
