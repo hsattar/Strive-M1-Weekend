@@ -99,3 +99,22 @@ swapHeadingsBtn.addEventListener('click', () => {
     h1.innerText = h2.innerText
     h2.innerText = tempheading
 })
+
+
+// EX 19
+
+let changeTableBgc = document.getElementById('change-table-bgc')
+changeTableBgc.addEventListener('click', () => {
+    let table = document.getElementsByTagName('table')[0]
+    table.classList.toggle('table-dark')
+})
+
+
+// Ex 20 
+
+let headingColor = document.getElementById('heading-background')
+headingColor.addEventListener('change', (e) => {
+   let header = document.getElementsByTagName('header')[0]
+   header.style.backgroundColor = e.target.value
+   console.log(e.target.value)
+})
