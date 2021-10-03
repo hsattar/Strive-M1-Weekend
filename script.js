@@ -87,3 +87,15 @@ const checkNumberOfStudents = () => {
     let enrolledStudentsHeader = document.getElementById('number-of-students-enrolled')
     enrolledStudentsHeader.innerText = `Enrolled Students: ${numberOfEnrolledStudents}`
 }
+
+
+// EX 18
+
+let swapHeadingsBtn = document.getElementById('swap-headings')
+swapHeadingsBtn.addEventListener('click', () => {
+    let h1 = document.getElementsByTagName('h1')[0]
+    let h2 = document.getElementsByTagName('h2')[0]
+    let tempheading = h1.innerText
+    h1.innerText = h2.innerText
+    h2.innerText = tempheading
+})
